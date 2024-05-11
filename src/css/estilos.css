@@ -1,94 +1,125 @@
 body {
     background-image: url(../img/Background.png);
     background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    /* overflow-x: hidden; */
+    box-sizing: border-box;
 }
 
-#container {
-    width: 100vw;
-    height: 100vw;
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .cabecalho {
-    width: 1920px;
+    width: 1549px;
     height: 69px;
     background-color: #4e3494;
 }
 
 .cabecalho .logo1 {
     width: 89.19px;
-    height: 100.76px;
+    height: 97.76px;
     margin: 20px;
-    margin-left: 65px;
+    margin-left: 95px;
 }
 
 .cabecalho .logo2 {
-    width: 100.47px;
-    height: 101.86px;
+    width: 89.04px;
+    height: 97.86px;
     margin: 20px;
 
 }
 
-.dente1 {
-    width: 940px;
-    height: 800.4px;
-    top: 88.6px;
-    left: 687px;
-    float: right;
-}
-
-.container .titulo {
-    font-size: 101px;
-    font-weight: 400;
-    line-height: 110.52px;
-    position: absolute;
-    top: 30%;
-    margin-left: 130px;
-    color: #4a007f;
-}
-
-.container .texto {
-    font-size: 25px;
-    color: #4a007f;
-    position: absolute;
-    top: 65%;
-    margin-left: 130px;
-}
-
-.subtitulo1 {
-   font-size: 25px;
-   color: #4a007f;
-   margin: 0;
-   padding: 0;
-   text-align: center;
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   position: absolute;
-   top: 120%;
-   left: 35%;
-   /* transform: translateX(-50%) translateY(-50%); */
-}
-
-
-
-.sobre div{ 
-    background-color: blueviolet;
+.home {
     display: flex;
-    margin-bottom: 9rem;
+    height: 90%;
+    text-align: center;
+}
+
+.home .dente1 {
+    width: 700px;
+    display: flex;
+    position: absolute;
+    top: 10%;
+    left: 52%;
+}
+
+.home .informacoes .titulo {
+    color: #4e3494;
+    position: absolute;
+    z-index: 1;
+    font-size: 60px;
+    /* min-height: calc(100vh - 80px); */
+    display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 300px;
-    border-radius: 20px;
-  
-
-    
+    justify-content: center;
+    gap: 32px;
+    padding: 80px 80px 80px 170px;
+    /* max-width: 1080px; */
 }
 
-.sobre{
+.home .informacoes .texto {
+    color: #4e3494;
+    position: absolute;
+    z-index: 1;
+    font-size: 20px;
     display: flex;
-    
-    
+    flex-direction: column;
+    justify-content: center;
+    gap: 42px;
+    padding: 70px 70px 70px 170px;
+    top: 245px;
+
 }
 
-.sobre__titulo {
+
+.planos-container {
+    /* position: absolute; */
+    top: 95%;
+    justify-content: center;
+    /* align-items: center; */
+    padding-top: 3rem;
+    padding-bottom: 0rem;
+}
+
+.planos__titulo {
+    margin-top: 20px;
+    /* Adiciona espaço entre a imagem e o título */
+    color: #4e3494;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    gap: 10px;
+}
+
+.planos__cartoes {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 7rem;
+    justify-content: center;
+}
+
+.cartao {
+    display: flex;
+    flex-direction: column;
+    background-color: #4e3494;
+    width: 70%;
+    max-width: 300px;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+
+}
+
+.cartao__titulo {
+    color: #fff;
     font-weight: 700;
     font-size: 1.5rem;
     text-align: center;
@@ -97,32 +128,116 @@ body {
 
     margin-bottom: .5rem;
 
-    border-bottom: 1px solid var(--azul-claro);
-}
-    
-    
-
-
-.sobre__texto {
-    line-height: 28px;
-    font-size: 15px;
-    
-    
 }
 
-.subtitulo2 {
-    font-size: 25px;
-    color: #4a007f;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.cartao__conteudo {
+    padding: 0 15%;
+}
+
+.cartao__texto {
+    color: #fff;
+    line-height: 18px;
+}
+
+/* .fileira{
+    background-color: darkorchid;
     position: absolute;
-    top: 170%;
-    left: 35%;
-    /* transform: translateX(-50%) translateY(-50%); */
- }
- 
+    width: 50%;
+    left: 25%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    
+} */
 
+.membros-container {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
 
+}
+
+.fileira {
+    /* order: -1; */
+    /* Para colocar a imagem fileira1 acima */
+    /* align-self: flex-start; Alinha a imagem fileira1 para a esquerda */
+    /* max-width: none;  */
+    /* margin-left: 0; */
+    justify-content: center;
+    
+}
+
+.membros_titulo {
+    margin-top: 25px;
+    /* Adiciona espaço entre a imagem e o título */
+    color: #4e3494;
+    font-size: 45px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.membro__cartão {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    overflow-x: auto;
+    /* Adiciona rolagem horizontal se necessário */
+    max-width: 100%;
+    /* Garante que o contêiner não ultrapasse a largura da página */
+}
+
+.membro1 {
+    margin: 0 5px;
+    /* Espaçamento entre os membros */
+    margin-right: 5px;
+}
+
+.membro1:first-child {
+    margin-left: 0;
+    /* Remova a margem esquerda do primeiro membro */
+}
+
+.equipe {
+display: flex;
+justify-content: center;
+align-items: center;
+ /* Isso garante que a seção ocupe toda a altura da página */
+}
+
+.membros__dentes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.membro {
+margin-bottom: 5px; /* Espaçamento entre os membros */
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4e3494;
+}
+
+.rodape__social {
+    display: flex;
+justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rodape__social li {
+    margin-right: 10px; /* Espaçamento entre os ícones */
+}
+
+.direitos-autorais {
+    text-align: center; /* Alinha o texto ao centro */
+    color: #fff;
+}
 
