@@ -37,7 +37,6 @@ body {
 }
 
 .home {
-    display: flex;
     height: 90%;
     text-align: center;
 }
@@ -50,18 +49,24 @@ body {
     left: 52%;
 }
 
-.home .informacoes .titulo {
-    color: #4e3494;
+.titulo {
+    position: relative;
+}
+
+.primeira-linha, .segunda-linha {
     position: absolute;
-    z-index: 1;
-    font-size: 60px;
-    /* min-height: calc(100vh - 80px); */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 32px;
-    padding: 80px 80px 80px 170px;
-    /* max-width: 1080px; */
+    top: 0;
+    left: 0;
+}
+
+.primeira-linha {
+    color: #4e3494; /* Cor da palavra "SQUAD" */
+}
+
+.segunda-linha {
+    color: #4e3494; /* Cor da palavra "ROXO PASTEL" */
+    font-weight: bold; /* Para destacar a segunda linha */
+    margin-top: 1.5em; 
 }
 
 .home .informacoes .texto {
@@ -73,11 +78,9 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 42px;
-    padding: 70px 70px 70px 170px;
-    top: 245px;
-
+    /* padding: 70px 70px 70px 170px; */
+    /* top: 245px; */
 }
-
 
 .planos-container {
     /* position: absolute; */
@@ -91,6 +94,8 @@ body {
 .planos__titulo {
     margin-top: 20px;
     /* Adiciona espaço entre a imagem e o título */
+    letter-spacing: 4px;
+    border-bottom: 2px solid #4e3494;
     color: #4e3494;
     display: flex;
     flex-direction: column;
@@ -109,6 +114,7 @@ body {
 
 .cartao {
     display: flex;
+    flex: 1; /* Faz com que os itens ocupem a mesma quantidade de espaço */
     flex-direction: column;
     background-color: #4e3494;
     width: 70%;
@@ -118,17 +124,21 @@ body {
 
 }
 
-.cartao__titulo {
+.titulo-com-certo {
     color: #fff;
+    border-bottom: 1px solid #fff;
     font-weight: 700;
     font-size: 1.5rem;
     text-align: center;
-
     padding: .75rem 0;
-
     margin-bottom: .5rem;
-
 }
+
+.titulo-com-certo::before {
+    content: "\2714"; /* Código Unicode para o sinal de certo (✔) */
+    color: white; /* Cor do sinal de certo */
+    margin-right: 5px; /* Espaçamento à direita do sinal de certo */
+  }
 
 .cartao__conteudo {
     padding: 0 15%;
@@ -149,14 +159,6 @@ body {
     
 } */
 
-.membros-container {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: center; */
-
-}
-
 .fileira {
     /* order: -1; */
     /* Para colocar a imagem fileira1 acima */
@@ -165,6 +167,13 @@ body {
     /* margin-left: 0; */
     justify-content: center;
     
+}
+
+.membros-container {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
 }
 
 .membros_titulo {
@@ -193,6 +202,7 @@ body {
     margin: 0 5px;
     /* Espaçamento entre os membros */
     margin-right: 5px;
+    border-bottom: 2px solid #4e3494;
 }
 
 .membro1:first-child {
@@ -201,22 +211,21 @@ body {
 }
 
 .equipe {
-display: flex;
-justify-content: center;
-align-items: center;
- /* Isso garante que a seção ocupe toda a altura da página */
+    display: flex;
+    justify-content: center; /* Centraliza os itens verticalmente */
 }
 
 .membros__dentes {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens verticalmente */
+  
 }
-
+  
 .membro {
-margin-bottom: 5px; /* Espaçamento entre os membros */
+    margin-bottom: 20px; /* Espaçamento entre as imagens */
 }
-
+  
 .rodape {
     display: flex;
     justify-content: space-between;
@@ -240,4 +249,57 @@ justify-content: center;
     text-align: center; /* Alinha o texto ao centro */
     color: #fff;
 }
+
+ 
+@media screen and (min-width: 393px){
+    .primeira-linha{
+        left: 17%;
+        top: 297%;
+        font-size: 45px;
+    }
+    .segunda-linha{
+        left: 17%;
+        top: 299%;
+        font-size: 45px;
+    }
+    .texto{
+        padding: 30px 30px 30px 100px;
+        top: 300px;
+        
+    }
+    .home .dente1{
+        left: 75%;
+    }
+    .cartao{
+        max-width: 400px;
+    }
+    .planos__cartoes{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    
+}
+@media screen and (min-width: 1024px){
+    .cabecalho{
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .planos__cartoes{
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .cartao{
+        max-width: 300px;
+    }
+
+    
+}
+
 
